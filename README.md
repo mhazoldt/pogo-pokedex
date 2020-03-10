@@ -1,3 +1,5 @@
+This was for a code challenge. It is hosted at [https://pogo-pokedex.netlify.com](https://pogo-pokedex.netlify.com)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
