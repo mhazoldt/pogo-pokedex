@@ -1,0 +1,5 @@
+
+.results-main {
+    display: grid;
+    grid-template-columns: auto;
+}

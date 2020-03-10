@@ -1,0 +1,11 @@
+
+
+.baselayout-content-container {
+    padding: 15px;
+    min-height: calc(100vh - 83px);
+    height: 100%;
+    padding-top: 65px;
+    background-color: #4ddbff;
+    overflow-y: scroll;
+    border-bottom: 3px solid black;
+}

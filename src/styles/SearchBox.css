@@ -1,0 +1,28 @@
+
+.search-box-main {
+    border: 0px solid lime;
+    width: calc(100% - 60px);
+}
+
+
+.search-box-input {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: hsl(0, 100%, 90%);
+    line-height: 25px;
+    outline: none;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.toggle-filters-button {
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: hsl(0, 100%, 70%);
+    color: black;
+    line-height: 20px;
+    display: inline-block;
+    outline: none;
+    margin-left: 5px;
+}
