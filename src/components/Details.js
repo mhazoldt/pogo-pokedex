@@ -8,9 +8,17 @@ import '../styles/Details.css';
 
 class Details extends React.Component {
 
-  renderEvolution(evolutions) {
+  renderNextEvolution(evolutions) {
     if(evolutions && evolutions.length > 0) {
       return <NavLink to={`/details/${evolutions[0].num}`}>{evolutions[0].name}</NavLink>
+    } else {
+      return <div></div>
+    }
+  }
+
+  renderPrevEvolution(evolutions) {
+    if(evolutions && evolutions.length > 0) {
+      return <NavLink to={`/details/${evolutions[evolutions.length - 1].num}`}>{evolutions[evolutions.length - 1].name}</NavLink>
     } else {
       return <div></div>
     }
@@ -24,7 +32,6 @@ class Details extends React.Component {
 
   render() {
     let pokedexNumber = this.props.match.params.pokedexnumber;
-
 
     let pokemon = this.props.pokedex[parseInt(pokedexNumber - 1)] || {
       name: '',
@@ -57,13 +64,13 @@ class Details extends React.Component {
             <div></div>
             {
               pokemon.prev_evolution && pokemon.prev_evolution.length > 0
-                ? <div className='details-row'>previous evolution: {this.renderEvolution(pokemon.prev_evolution)}</div>
+                ? <div className='details-row'>previous evolution: {this.renderPrevEvolution(pokemon.prev_evolution)}</div>
                 : <div></div>
             }
             <div></div>
             {
               pokemon.next_evolution && pokemon.next_evolution.length > 0
-                ? <div className='details-row'>next evolution: {this.renderEvolution(pokemon.next_evolution)}</div>
+                ? <div className='details-row'>next evolution: {this.renderNextEvolution(pokemon.next_evolution)}</div>
                 : <div></div>
             }
           </div>
